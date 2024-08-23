@@ -10,11 +10,11 @@ public class FactoryConfiguration {
     private static FactoryConfiguration factoryConfiguration;
     private SessionFactory sessionFactory;
     private FactoryConfiguration(){
-       /*Configuration configuration = new Configuration().configure().addAnnotatedClass(Student.class);
-        sessionFactory = configuration.buildSessionFactory();*/
-
-        Configuration configuration = new Configuration().configure().addAnnotatedClass(Teacher.class);
+        Configuration configuration = new Configuration().configure().addAnnotatedClass(Student.class);
         sessionFactory = configuration.buildSessionFactory();
+
+        Configuration configuration1 = new Configuration().configure().addAnnotatedClass(Teacher.class);
+        sessionFactory = configuration1.buildSessionFactory();
     }
     public static FactoryConfiguration getInstance(){
         return (factoryConfiguration == null)?

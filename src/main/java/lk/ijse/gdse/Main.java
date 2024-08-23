@@ -14,7 +14,7 @@ public class Main {
         Transaction transaction = session.beginTransaction();
 
         //Student save,delete,update
-        Student student = new Student(1,new FullName("Paboda","Sanduni"),"Kurunegala");
+        Student student = new Student(3,new FullName("Paboda","Sanduni"),"Kurunegala");
         session.save(student);
         session.delete(student);
         session.update(student);
@@ -33,8 +33,9 @@ public class Main {
         session1.delete(teacher);
         //get
        Teacher teacher1= session1.get(Teacher.class, 1);
-        System.out.println(teacher1.getName() + ", " +teacher1.getAddress()+", "+teacher1.getSalary());
+//        System.out.println(teacher1.getName() + ", " +teacher1.getAddress()+", "+teacher1.getSalary());
         transaction1.commit();
         session1.close();
+
     }
 }

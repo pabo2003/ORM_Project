@@ -12,6 +12,9 @@
     <property name="hibernate.show_sql">true</property>
     <property name="hibernate.hbm2ddl.auto">update</property>
 
+    <mapping class="lk.ijse.gdse.Entity.Student"/>
+    <mapping class="lk.ijse.gdse.Entity.Teacher"/>
+
     <!--<property name="connection.url"/>
     <property name="connection.driver_class"/>-->
     <!-- <property name="connection.username"/> -->
